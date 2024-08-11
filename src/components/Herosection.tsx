@@ -1,6 +1,10 @@
 "use client";
 import { Check, Star } from "lucide-react";
 import MaxwidthWrapper from "@/components/ui/MaxwidthWrapper";
+import Banner from "./ui/Banner";
+import { AppleCardsCarouselDemo } from "./ui/Carsoual";
+import Testimonals from "./ui/Testimonals";
+import Footer from "./ui/Footer";
 
 const HeroSection = () => {
   return (
@@ -8,6 +12,14 @@ const HeroSection = () => {
       <MaxwidthWrapper className="pb-24 pt-10 lg:grid-cols-3 sm:pb-32 lg:gap-x-0 xl:gap-8 lg:pt-24 xl:pt-32 lg:pb-52">
         <div className="col-span-2 px-6 lg:px-0 lg:pt-4">
           <div className="relative mx-auto text-center flex flex-col items-center">
+          <div className="relative flex justify-center items-center">
+          <img src="./apple.png" className="w-15 h-20"/> {/* Adjust the size as needed */}
+          <div className="flex flex-col items-center ml-2">
+            <h1></h1>
+            <h1 className="text-6xl mt-5">xVerve</h1>
+            </div>
+            </div>
+
             <h1 className="relative w-fit tracking-tight text-balance mt-16 font-bold !leading-tight text-gray-900 text-5xl md:text-6xl lg:text-6xl">
               Welcome to the Apple Exclusive Store <span className="text-blue-500">Verve</span> !
             </h1>
@@ -58,7 +70,12 @@ const HeroSection = () => {
                 <p><span className="font-semibold">2M</span> Happy customers</p>
           </div>
         </div>
-      </MaxwidthWrapper>
+        </MaxwidthWrapper>
+      <Banner/>
+      <AppleCardsCarouselDemo />
+      <Testimonals/>
+      <Footer/>
+      
     </section>
   );
 };
